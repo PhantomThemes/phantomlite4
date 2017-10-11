@@ -1,0 +1,49 @@
+.animated {
+  animation-duration: .5s;
+  animation-fill-mode: both;
+}
+
+.carousel-item .btn {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.carousel-item.active .animated {
+  animation-name: fadeInRight;
+}
+
+.carousel-item.active .btn {
+  animation-name: fadeInDown;
+}
+
+.carousel-item-right .animated ,
+.carousel-item-right .btn {
+  opacity: 0;
+}
+
+
+
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(50%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
